@@ -1,0 +1,2 @@
+app.author;Lina W.
+app.version;1.1
