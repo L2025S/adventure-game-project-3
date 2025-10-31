@@ -21,7 +21,14 @@ public class Main {
         ui.showMessage("Välkommen till Äventyrsspelet!");
         ui.showMessage("Version " + instance.getVersion() + " av " + instance.getAuthor());
         String name = ui.getInput("Ange ditt namn:");
-        Player player = new Player(name, 100, 0, 10);
+//        Player player = new Player(name, 100, 0, 10);
+        Player player = new Player.Builder()
+                .setName(name)
+                .setHealth(100)
+                .setScore(0)
+                .setStrength(10)
+                .build();
+
 
         new StartRoom().enterRoom(player, ui);
 

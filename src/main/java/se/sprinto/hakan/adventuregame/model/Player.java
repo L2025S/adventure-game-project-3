@@ -46,4 +46,32 @@ public class Player extends AbstractCharacter {
             addScore(50);
         }
     }
+    public static class Builder{
+        private String name;
+        private int health;
+        private int score;
+        private int strength;
+    public Builder setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public Builder setHealth (int health) {
+        this.health = health;
+        return this;
+    }
+
+    public Builder setScore(int score) {
+        this.score = score;
+        return this;
+    }
+    public Builder setStrength(int strength) {
+        this.strength = strength;
+        return this;
+    }
+
+    public Player build() {
+        return new Player(name, health, score, strength);
+    }
+
+    }
 }
