@@ -16,9 +16,10 @@ public class ForestRoomTest {
 
     @BeforeEach
     public void setUp() {
-        FakeUI fakeUI = new FakeUI();
-        Player player = new Player("Test", 100, 0, 10);
-        ForestRoom forestRoom = new ForestRoom();
+
+        fakeUI = new FakeUI();
+        player = new Player("Test", 100, 0, 10);
+        forestRoom = new ForestRoom();
     }
 
 
@@ -53,6 +54,6 @@ public class ForestRoomTest {
         assertFalse(result1);
         assertEquals(0, result2);
 
-        
+
     }
 }
