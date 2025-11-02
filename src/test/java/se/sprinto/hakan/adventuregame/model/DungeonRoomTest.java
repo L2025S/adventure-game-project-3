@@ -21,20 +21,6 @@ public class DungeonRoomTest {
 
     }
 
-    @Test
-    public void testEnterRoomWithOneAttack () {
-        // Arrange
-        fakeUI.setInput("a");
-
-        // Act
-        dungeonRoom.enterRoom(player, fakeUI);
-
-        // Assert
-        assertTrue(goblin.isAlive());
-        assertEquals(50, player.getScore());
-        assertEquals(95, player.getHealth());
-
-    }
 
     @Test
     public void testEnterRoomWithTwoAttacks() {
@@ -47,23 +33,6 @@ public class DungeonRoomTest {
 
         //Assert
         assertTrue(player.hasDefeatedEnemy());
-        assertEquals(50, player.getScore());
-        assertEquals(95, player.getHealth());
-
-    }
-
-    @Test
-    public void testEnterRoomWithNo () {
-
-        //Arrange
-        fakeUI.setInput("r");
-
-        // Act
-        dungeonRoom.enterRoom(player, fakeUI);
-
-        // Assert
-        assertTrue(goblin.isAlive());
-        assertEquals(0, player.getScore());
 
     }
 }

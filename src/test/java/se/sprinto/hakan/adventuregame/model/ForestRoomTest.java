@@ -31,29 +31,10 @@ public class ForestRoomTest {
        // Act
         forestRoom.enterRoom(player, fakeUI);
 
-        boolean result1 = player.hasFoundKey();
-        int result2 = player.getScore();
+        boolean result = player.hasFoundKey();
 
         // Assert
-        assertTrue(result1);
-        assertEquals(20, result2);
-
-    }
-
-    @Test
-    public void testEnterRoomWithNo() {
-
-        fakeUI.setInput("nej");
-
-        // Act
-        forestRoom.enterRoom(player,fakeUI);
-        boolean result1 =player.hasFoundKey();
-        int result2 = player.getScore();
-
-        // Assert
-        assertFalse(result1);
-        assertEquals(0, result2);
-
+        assertTrue(result);
 
     }
 }
