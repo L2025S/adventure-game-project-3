@@ -51,6 +51,7 @@ public class Player extends AbstractCharacter {
         private int health;
         private int score;
         private int strength;
+
     public Builder setName(String name) {
         this.name = name;
         return this;
