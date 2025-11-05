@@ -6,11 +6,14 @@ public class Player extends AbstractCharacter {
     private boolean openedChest;
     private boolean foundBook;
     private boolean returnedBook;
+    private boolean playedWheelOfFortune;
+    private boolean competed;
 
     public Player(String name, int health, int score, int strength) {
         super(name, health, score, strength);
     }
 
+    // Classroom
     public boolean hasFoundBok() {
         return foundBook;
     }
@@ -18,12 +21,31 @@ public class Player extends AbstractCharacter {
         this.foundBook = foundBook;
     }
 
+    // Meeting Room
     public boolean hasReturnedBook() {
         return returnedBook;
     }
     public void setReturnedBook(boolean returnedBook) {
         this.returnedBook = returnedBook;
     }
+
+    // The Sports Hall
+    public boolean hasCompeted() {
+        return competed;
+    }
+    public void setCompeted(boolean competed) {
+        this.competed = competed;
+    }
+
+    // Wheel of Fortune Room
+    public boolean hasPlayedWheelOfFortune() {
+        return playedWheelOfFortune;
+    }
+    public void setPlayedWheelOfFortune(boolean playedWheelOfFortune) {
+        this.playedWheelOfFortune = playedWheelOfFortune;
+    }
+
+
 
     public boolean hasFoundKey() {
         return foundKey;
@@ -51,7 +73,8 @@ public class Player extends AbstractCharacter {
     }
 
     public boolean hasWon() {
-        return foundKey && defeatedEnemy && openedChest && foundBook && returnedBook ;
+        return foundKey && defeatedEnemy && openedChest && foundBook && returnedBook &&
+               competed && playedWheelOfFortune;
     }
 
     @Override
@@ -62,10 +85,12 @@ public class Player extends AbstractCharacter {
             addScore(50);
         }
     }
+    // The Sports Hall
     public int run100m() {
         return (int) (Math.random()*10);
 
     }
+    // The builder pattern
     public static class Builder{
         private String name;
         private int health;

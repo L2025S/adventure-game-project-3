@@ -10,7 +10,7 @@ public class StartRoom implements Room {
         boolean exit = false;
         while (!exit) {
             String choice = ui.getInput("Vilken dörr vill du ta? (1=Skog, 2=Fängelse, 3=Skattkammare," +
-                    " 4=Klassrum, 5=Konferensrum,6=Idrottshallen, q=avsluta)");
+                    " 4=Klassrum, 5=Konferensrum,6=Idrottshallen, 7=lyckojulrum, q=avsluta)");
             switch (choice) {
                 case "1":
                     if (!player.hasFoundKey()) {
@@ -45,7 +45,18 @@ public class StartRoom implements Room {
                     }
                     break;
                 case "6":
-                    new SportsHall().enterRoom(player, ui);
+                    if(!player.hasCompeted()) {
+                        new SportsHall().enterRoom(player, ui);
+                    } else {
+                        System.out.println("Du har redan tävlat 100 meter med David.");
+                    }
+                    break;
+                case "7":
+                    if(!player.hasPlayedWheelOfFortune()) {
+                        new WheelOfFortuneRoom().enterRoom(player, ui);
+                    } else {
+                        System.out.println("Du har redan spelat lyckohjulet.");
+                    }
                     break;
                 case "q":
                     exit = true;

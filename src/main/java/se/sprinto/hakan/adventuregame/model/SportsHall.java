@@ -26,6 +26,7 @@ public class SportsHall implements Room {
                 player.addScore(-100);
                 sprinter.addScore(100);
             }
+            player.setCompeted(true);
         } else {
             ui.showMessage("Du lämnat idrottshallen utan att tävla");
         }
