@@ -36,12 +36,14 @@ public class StartRoom implements Room {
                     } else {
                         System.out.println("Du har varit i klassrummet och hittat en bok.");
                     }
+                    break;
                 case "5":
                     if(!player.hasReturnedBook()) {
                         new MeetingRoom().enterRoom(player,ui);
                     } else {
                         System.out.println("Du har redan hjälpte professorn att hitta sin bok.");
                     }
+                    break;
                 case "q":
                     exit = true;
                     break;

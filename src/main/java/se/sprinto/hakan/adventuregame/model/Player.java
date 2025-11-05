@@ -51,7 +51,7 @@ public class Player extends AbstractCharacter {
     }
 
     public boolean hasWon() {
-        return foundKey && defeatedEnemy && openedChest;
+        return foundKey && defeatedEnemy && openedChest && foundBook && returnedBook ;
     }
 
     @Override
