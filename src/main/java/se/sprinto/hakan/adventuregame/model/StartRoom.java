@@ -10,7 +10,7 @@ public class StartRoom implements Room {
         boolean exit = false;
         while (!exit) {
             String choice = ui.getInput("Vilken dörr vill du ta? (1=Skog, 2=Fängelse, 3=Skattkammare," +
-                    " 4=Klassrum, 5=Konferensrum, q=avsluta)"); // 这里后期需要修改。
+                    " 4=Klassrum, 5=Konferensrum,6=Idrottshallen, q=avsluta)");
             switch (choice) {
                 case "1":
                     if (!player.hasFoundKey()) {
@@ -43,6 +43,9 @@ public class StartRoom implements Room {
                     } else {
                         System.out.println("Du har redan hjälpte professorn att hitta sin bok.");
                     }
+                    break;
+                case "6":
+                    new SportsHall().enterRoom(player, ui);
                     break;
                 case "q":
                     exit = true;
