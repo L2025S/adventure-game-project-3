@@ -5,6 +5,7 @@ public class Player extends AbstractCharacter {
     private boolean defeatedEnemy;
     private boolean openedChest;
     private boolean foundBook;
+    private boolean returnedBook;
 
     public Player(String name, int health, int score, int strength) {
         super(name, health, score, strength);
@@ -15,6 +16,13 @@ public class Player extends AbstractCharacter {
     }
     public void setFoundBook(boolean foundBook) {
         this.foundBook = foundBook;
+    }
+
+    public boolean hasReturnedBook() {
+        return returnedBook;
+    }
+    public void setReturnedBook(boolean returnedBook) {
+        this.returnedBook = returnedBook;
     }
 
     public boolean hasFoundKey() {

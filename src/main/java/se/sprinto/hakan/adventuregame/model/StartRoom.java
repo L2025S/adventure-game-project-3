@@ -9,7 +9,8 @@ public class StartRoom implements Room {
         ui.showMessage("Du befinner dig i start-rummet. Du ser tre dörrar framför dig.");
         boolean exit = false;
         while (!exit) {
-            String choice = ui.getInput("Vilken dörr vill du ta? (1=Skog, 2=Fängelse, 3=Skattkammare, 4=Klassrum, q=avsluta)"); // 这里后期需要修改。
+            String choice = ui.getInput("Vilken dörr vill du ta? (1=Skog, 2=Fängelse, 3=Skattkammare," +
+                    " 4=Klassrum, 5=Konferensrum, q=avsluta)"); // 这里后期需要修改。
             switch (choice) {
                 case "1":
                     if (!player.hasFoundKey()) {
@@ -29,11 +30,17 @@ public class StartRoom implements Room {
                         System.out.println("Du har redan hittat och öppnat kistan");
                     }
                     break;
-                case "4" :
+                case "4":
                     if(!player.hasFoundBok()){
                         new Classroom().enterRoom(player,ui);
                     } else {
                         System.out.println("Du har varit i klassrummet och hittat en bok.");
+                    }
+                case "5":
+                    if(!player.hasReturnedBook()) {
+                        new MeetingRoom().enterRoom(player,ui);
+                    } else {
+                        System.out.println("Du har redan hjälpte professorn att hitta sin bok.");
                     }
                 case "q":
                     exit = true;
