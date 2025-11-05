@@ -14,9 +14,10 @@ public class WheelOfFortuneRoom implements Room {
                 .setStrength(20)
                 .build();
         while(staff.getScore() > 150) {
-            String choice = ui.getInput ("Vill du spela lyckohjul? Det är möjligt att du kan max få 100 poäng,\n" +
-                    "men det kan också ta max 100 poäng från dig.\n" +
-                    "Vill du spela? (ja/nej)");
+            String choice = ui.getInput ("""
+                    Vill du spela lyckohjul? Det är möjligt att du kan max få 100 poäng,
+                    men det kan också ta max 100 poäng från dig.
+                    Vill du spela? (ja/nej)""");
             if (choice.equalsIgnoreCase("ja")) {
                 staff.drawLotteryFor(player);
             } else {
