@@ -1,5 +1,9 @@
 package se.sprinto.hakan.adventuregame.model;
 
+import se.sprinto.hakan.adventuregame.model.rooms.Classroom;
+import se.sprinto.hakan.adventuregame.model.rooms.MeetingRoom;
+import se.sprinto.hakan.adventuregame.model.rooms.SportsHall;
+import se.sprinto.hakan.adventuregame.model.rooms.WheelOfFortuneRoom;
 import se.sprinto.hakan.adventuregame.view.UI;
 
 public class StartRoom implements Room {
@@ -18,7 +22,6 @@ public class StartRoom implements Room {
                     } else {
                         System.out.println("Du har redan hittat och plockat upp nyckeln.");
                     }
-
                     break;
                 case "2":
                     new DungeonRoom().enterRoom(player, ui);

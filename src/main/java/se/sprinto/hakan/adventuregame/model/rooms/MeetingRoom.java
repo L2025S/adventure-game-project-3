@@ -1,5 +1,7 @@
-package se.sprinto.hakan.adventuregame.model;
+package se.sprinto.hakan.adventuregame.model.rooms;
 
+import se.sprinto.hakan.adventuregame.model.Player;
+import se.sprinto.hakan.adventuregame.model.Room;
 import se.sprinto.hakan.adventuregame.view.UI;
 
 public class MeetingRoom implements Room {
@@ -13,7 +15,7 @@ public class MeetingRoom implements Room {
                 player.setReturnedBook(true);
                 player.addScore(150);
             } else {
-                ui.showMessage("Du har letat men har inte tur.");
+                ui.showMessage("Du har letat men hittat inte boken.");
             }
 
         } else {

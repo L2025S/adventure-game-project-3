@@ -1,5 +1,8 @@
-package se.sprinto.hakan.adventuregame.model;
+package se.sprinto.hakan.adventuregame.model.rooms;
 
+import se.sprinto.hakan.adventuregame.model.Player;
+import se.sprinto.hakan.adventuregame.model.Room;
+import se.sprinto.hakan.adventuregame.model.roles.Sprinter;
 import se.sprinto.hakan.adventuregame.view.UI;
 
 public class SportsHall implements Room {

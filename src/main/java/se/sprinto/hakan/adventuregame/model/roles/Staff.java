@@ -1,22 +1,25 @@
-package se.sprinto.hakan.adventuregame.model;
+package se.sprinto.hakan.adventuregame.model.roles;
 
-public class Sprinter extends AbstractCharacter{
+import se.sprinto.hakan.adventuregame.model.AbstractCharacter;
 
+import java.util.Random;
 
-    public Sprinter(String name, int health, int score, int strength) {
+public class Staff extends AbstractCharacter {
+
+    Staff (String name, int health, int score, int strength){
         super(name, health, score, strength);
     }
 
-    public int run100m() {
-         return (int) (Math.random()*10);
-
+    public void drawLotteryFor(AbstractCharacter target) {
+        int lottery = new Random().nextInt(200) - 100;
+        addScore(-lottery);
+        target.addScore(lottery);
     }
 
     @Override
     public void attack (AbstractCharacter target) {
         target.setHealth(target.getHealth() - this.getStrength());
     }
-
     public static class Builder {
         private String name;
         private int health;
@@ -27,24 +30,21 @@ public class Sprinter extends AbstractCharacter{
             this.name = name;
             return this;
         }
-
         public Builder setHealth (int health) {
             this.health = health;
             return this;
         }
-
-        public Builder setScore (int score) {
+        public Builder setScore( int score) {
             this.score = score;
             return this;
         }
-
-        public Builder setStrength ( int strength) {
+        public Builder setStrength(int strength) {
             this.strength = strength;
             return this;
         }
 
-        public Sprinter build() {
-            return new Sprinter (name, health, score, strength);
+        public Staff build() {
+            return new Staff(name, health, score, strength);
         }
     }
 }
