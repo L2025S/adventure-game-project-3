@@ -9,16 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ClassroomTest {
-    private FakeUI fakeUI;
-    private Player player;
-    private Classroom classroom;
 
-     @Test
+    @Test
     public void testEnterRoom() {
          // Arrange
-         fakeUI = new FakeUI();
-         player = new Player("Test", 100,0,20);
-         classroom = new Classroom();
+         FakeUI fakeUI = new FakeUI();
+         Player player = new Player("Test", 100, 0, 20);
+         Classroom classroom = new Classroom();
          fakeUI.setInput("ja");
 
          // Act

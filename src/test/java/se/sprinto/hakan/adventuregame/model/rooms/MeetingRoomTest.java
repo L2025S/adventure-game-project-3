@@ -8,16 +8,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MeetingRoomTest {
-    private Player player;
-    private FakeUI fakeUI;
-    private MeetingRoom meetingRoom;
 
     @Test
     public void testMeetingRoom() {
         // Arrange
-        fakeUI = new FakeUI();
-        meetingRoom = new MeetingRoom();
-        player = new Player ("Test", 100, 0, 20);
+        FakeUI fakeUI = new FakeUI();
+        MeetingRoom meetingRoom = new MeetingRoom();
+        Player player = new Player("Test", 100, 0, 20);
         fakeUI.setInput("ja");
         player.setFoundBook(true);
 
