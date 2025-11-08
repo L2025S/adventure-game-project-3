@@ -19,9 +19,11 @@ public class Main {
         AppInfo instance = AppInfo.getInstance();
         instance.readProperty();
         ui.showMessage("Välkommen till Äventyrsspelet!");
+        // New property
         ui.showMessage("Version " + instance.getVersion() + " av " + instance.getAuthor());
         String name = ui.getInput("Ange ditt namn:");
-//        Player player = new Player(name, 100, 0, 10);
+
+        // Builder pattern
         Player player = new Player.Builder()
                 .setName(name)
                 .setHealth(100)
