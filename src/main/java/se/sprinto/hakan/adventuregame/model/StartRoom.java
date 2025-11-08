@@ -34,7 +34,7 @@ public class StartRoom implements Room {
                     }
                     break;
                 case "4":
-                    if(!player.hasFoundBok()){
+                    if(!player.hasFoundBook()){
                         new Classroom().enterRoom(player,ui);
                     } else {
                         System.out.println("Du har varit i klassrummet och hittat en bok.");

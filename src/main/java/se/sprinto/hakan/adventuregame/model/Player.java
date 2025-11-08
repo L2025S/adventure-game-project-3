@@ -14,7 +14,7 @@ public class Player extends AbstractCharacter {
     }
 
     // Classroom
-    public boolean hasFoundBok() {
+    public boolean hasFoundBook() {
         return foundBook;
     }
     public void setFoundBook(boolean foundBook) {

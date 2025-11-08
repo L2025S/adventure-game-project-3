@@ -10,7 +10,7 @@ public class MeetingRoom implements Room {
         ui.showMessage(" Du kommer in i konferensrummet . En professor säger att han har tappat en bok.");
         String choice = ui.getInput ("Vill du hjälp professorn att leta efter sin bok? (ja/nej)");
         if(choice.equalsIgnoreCase("ja")) {
-            if(player.hasFoundBok()) {
+            if(player.hasFoundBook()) {
                 ui.showMessage("Du hjälpte professorn att hitta sin bok.");
                 player.setReturnedBook(true);
                 player.addScore(150);
