@@ -23,10 +23,10 @@ public class WheelOfFortuneRoom implements Room {
                     Vill du spela? (ja/nej)""");
             if (choice.equalsIgnoreCase("ja")) {
                 staff.drawLotteryFor(player);
+                player.setPlayedWheelOfFortune(true);
             } else {
                 ui.showMessage( "Du lämnar rummet utan att spela lyckohjulet.");
             }
         }
-        player.setPlayedWheelOfFortune(true);
     }
 }
