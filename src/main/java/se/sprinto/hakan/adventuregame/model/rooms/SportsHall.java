@@ -20,16 +20,20 @@ public class SportsHall implements Room {
         if (choice.equalsIgnoreCase("ja")) {
             int playerTime = player.run100m();
             int sprinterTime = sprinter.run100m();
+
             if (sprinterTime > playerTime) {
                 ui.showMessage("Du har vunnit!");
                 player.addScore(100);
-                sprinter.addScore(100);
+            } else if (sprinterTime == playerTime) {
+                ui.showMessage("Ni springer lika fort!");
+                player.addScore(50);
+                sprinter.addScore(50);
             } else {
                 ui.showMessage("Du har förlorat!");
-                player.addScore(-100);
                 sprinter.addScore(100);
             }
             player.setCompeted(true);
+
         } else {
             ui.showMessage("Du lämnat idrottshallen utan att tävla");
         }
