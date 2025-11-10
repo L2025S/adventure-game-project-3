@@ -10,7 +10,9 @@ public class Sprinter extends AbstractCharacter {
     }
 
     public int run100m() {
-         return (int) (Math.random()*10);
+         int time =  (int) (Math.random()*10);
+        System.out.println("David springer 100 meter på " + time + " sekunder.");
+        return time;
 
     }
 
