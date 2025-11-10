@@ -9,7 +9,6 @@ import se.sprinto.hakan.adventuregame.model.Statistics;
 import se.sprinto.hakan.adventuregame.service.StatisticsService;
 import se.sprinto.hakan.adventuregame.view.ScannerUI;
 import se.sprinto.hakan.adventuregame.view.UI;
-
 import java.io.IOException;
 
 public class Main {

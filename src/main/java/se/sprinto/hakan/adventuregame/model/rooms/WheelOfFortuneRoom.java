@@ -23,9 +23,11 @@ public class WheelOfFortuneRoom implements Room {
                     Vill du spela? (ja/nej)""");
             if (choice.equalsIgnoreCase("ja")) {
                 staff.drawLotteryFor(player);
+                System.out.println("Nu blir ditt poäng " + player.getScore() + " .");
                 player.setPlayedWheelOfFortune(true);
             } else {
-                ui.showMessage( "Du lämnar rummet utan att spela lyckohjulet.");
+                ui.showMessage( "Du lämnar rummet.");
+                return;
             }
         }
     }

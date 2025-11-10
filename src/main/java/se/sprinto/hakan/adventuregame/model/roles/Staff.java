@@ -14,6 +14,7 @@ public class Staff extends AbstractCharacter {
         int lottery = new Random().nextInt(200) - 100;
         addScore(-lottery);
         target.addScore(lottery);
+        System.out.println("Du har fått " + lottery + " poäng.");
     }
 
     @Override
