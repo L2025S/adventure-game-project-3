@@ -14,7 +14,7 @@ public class StartRoom implements Room {
         boolean exit = false;
         while (!exit) {
             String choice = ui.getInput("Vilken dörr vill du ta? (1=Skog, 2=Fängelse, 3=Skattkammare," +
-                    " 4=Klassrum, 5=Konferensrum,6=Idrottshallen, 7=lyckojulrum, q=avsluta)");
+                    " 4=Klassrum, 5=Konferensrum, 6=Idrottshallen, 7=lyckojulrum, q=avsluta)");
             switch (choice) {
                 case "1":
                     if (!player.hasFoundKey()) {
